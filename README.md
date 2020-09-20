@@ -21,18 +21,22 @@ View the [Github-pages](https://alischrec.github.io/PasswordGenerator_Hwk03/)
 * [Acknowledgements](#acknowledgements)
 
 ## About the Project:
-<!-- The focus of this project was to utilize the [Bootstrap Framework](https://getbootstrap.com/) as a base to create a functional, deployed application. The project was to create a working portfolio using Bootstap's grid system while incorporating personal information and images for viewing pleasure. 
+The focus of this project was to use Javascript to create a working password generator with the following criteria:
+* User must choose password length between 8-128 char.
+* User must choose whether or not their passwod will include lower/upper case letters, numbers, and/or special characters.
+* Password will generate after all criteria have been chosen by the user. 
+The .html and .css files were created prior to assignment and instructed not to be changed while working through this project. 
 
-![Project Gif](assets/images/gif.gif) -->
+<!-- ![Project Gif](assets/images/gif.gif) --> -->
 
 ### HTML:
-<!-- * [index.html](https://github.com/Alischrec/ResponsivePorfolio_Hwk02/blob/master/index.html) -->
+* [index.html](https://github.com/Alischrec/PasswordGenerator_Hwk03/blob/master/index.html)
 
 ### CSS:
-<!-- * [index.html](https://github.com/Alischrec/ResponsivePorfolio_Hwk02/blob/master/index.html) -->
+* [style.css](https://github.com/Alischrec/PasswordGenerator_Hwk03/blob/master/style.css)
 
 ### JAVASCRIPT:
-<!-- * [index.html](https://github.com/Alischrec/ResponsivePorfolio_Hwk02/blob/master/index.html) -->
+* [script.js](https://github.com/Alischrec/PasswordGenerator_Hwk03/blob/master/script.js)
 
 ### Built With:
 * This app was not built with any frameworks. 
