@@ -21,11 +21,10 @@
 //      A. If 'OK': generatePassword
 
 
-
-var arrOfLowcase = "abcdefghijklmnopqrstuvwxyz".split('');
-var arrOfUppercase = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split('');
-var arrnumeric = "0123456789".split('');
-var arrSpecialCharacters = "!@#$%^&*()_+~`|}{[]\:;?><,./-=".split('');
+var arrOfLowcase = 'abcdefghijklmnopqrstuvwxyz'.split('');
+var arrOfUppercase = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
+var arrnumeric = '0123456789'.split('');
+var arrSpecialCharacters = '!@#$%^&*()_+~`|}{[]\:;?><,./-='.split('');
 var characterPool = [];
 
 // Setting password character length
@@ -33,88 +32,95 @@ function generatePassword() {
   var passwordLengthInteger = 0;
 
   while (true) {
-    var passwordLength = prompt("How many characters would you like your password to be? Must be between 8-128 characters.");
+    var passwordLength = prompt('How many characters would you like your password to be? Must be between 8-128 characters.');
     if (isNaN(passwordLength)) {
-      alert("Please, enter a valid number.");
+      alert('Please, enter a valid number.');
       continue;
     }
 
     passwordLengthInteger = parseInt(passwordLength);
     if (8 <= passwordLengthInteger && passwordLengthInteger <= 128) {
-      alert("You have selected a password length of " + passwordLength);
+      alert('You have selected a password length of ' + passwordLength);
       break;
     }
     else {
-      alert("Error! You must select a password length between 8-128 characters. Number must be a whole number, no decimals.");
+      alert('Error! You must select a password length between 8-128 characters. Number must be a whole number, no decimals.');
     }
   }
+
   // Generation of user selected password:
   while (true) {
-    var lowerCase = confirm("Would you like your password to contain lower case characters?");
-    var upperCase = confirm("Would you like your password to contain upper case characters?");
-    var numbers = confirm("Would you like your password to contain numbers?");
-    var specialCharacters = confirm("Would you like your password to contain special characters?");
+    var lowerCase = confirm('Would you like your password to contain lower case characters?');
+    var upperCase = confirm('Would you like your password to contain upper case characters?');
+    var numbers = confirm('Would you like your password to contain numbers?');
+    var specialCharacters = confirm('Would you like your password to contain special characters?');
+
     if (lowerCase) {
       characterPool.push(...arrOfLowcase);
-      lowerCase = "lower case ";
+      lowerCase = 'lower case ';
+    }
+    else {
+      lowerCase = '';
     }
 
-    else if (upperCase) {
+    if (upperCase) {
       characterPool.push(...arrOfUppercase);
-      upperCase = "upper case ";
+      upperCase = 'upper case ';
+    }
+    else {
+      upperCase = '';
     }
 
-    else if (numbers) {
+    if (numbers) {
       characterPool.push(...arrnumeric);
-      numbers = "numbers ";
+      numbers = 'numbers ';
+    }
+    else {
+      numbers = '';
     }
 
-    else if (specialCharacters) {
+    if (specialCharacters) {
       characterPool.push(...arrSpecialCharacters);
-      specialCharacters = "special characters ";
+      specialCharacters = 'special characters ';
     }
-    else{
-      
+    else {
+      specialCharacters = '';
     }
 
+    // Confirm user selected criteria
     if (characterPool.length > 0) {
-      if (confirm("Great job! You have selected a password that is " + passwordLength + " characters long, and contains " + lowerCase + ", " + upperCase + ", " + numbers + ", and " + specialCharacters + " Ready to generate your password?")) {
+      if (confirm('Great job! You have selected a password that is ' + passwordLength + ' characters long, and contains ' + lowerCase + upperCase + numbers + specialCharacters + ' Ready to generate your password?')) {
         var userPassword = [];
+        var myPassword = '';
         // Print password here
         for (var i = 0; i < passwordLengthInteger; i++) {
           var randomIndex = Math.floor(Math.random() * characterPool.length);
           userPassword.push(characterPool[randomIndex]);
         }
-        return userPassword;
+        myPassword = userPassword.join('');
+        return myPassword;
         break;
       }
       else {
         return;
       }
     } else {
-      alert("Please, choose at least one option!");
+      alert('Please, choose at least one option!');
 
     }
   }
 }
-
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
 
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-// Console Log
-// console.log(arrOfLowcase);
-// console.log(arrOfUppercase);
-// console.log(numeric);
-// console.log(specialCharacters);
+generateBtn.addEventListener('click', writePassword);
