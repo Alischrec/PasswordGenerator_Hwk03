@@ -27,7 +27,7 @@ The focus of this project was to use Javascript to create a working password gen
 * Password will generate after all criteria have been chosen by the user. 
 The .html and .css files were created prior to assignment and instructed not to be changed while working through this project. 
 
-![Project Gif](assets/images/gif.gif) -->
+![Project Gif](assets/images/gif.gif)
 
 ### HTML:
 * [index.html](https://github.com/Alischrec/PasswordGenerator_Hwk03/blob/master/index.html)

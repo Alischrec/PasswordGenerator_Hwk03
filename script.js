@@ -20,7 +20,7 @@
 // 6. Confirm user: "Great job! You have selected a password that is ___ characters long, and contains ______, ______, ______, and ________. Ready to generate your password?"
 //      A. If 'OK': generatePassword
 
-
+// Group of arrays:
 var arrOfLowcase = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var arrOfUppercase = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
 var arrnumeric = '0123456789'.split('');
